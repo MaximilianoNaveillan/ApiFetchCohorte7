@@ -1,0 +1,22 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #007fff, #ffffff);
+  height: 100vh;
+}
+
+.content-image {
+  background-image: url("./poke-background.png");
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 7px;
+  border-radius: 5px;
+}
+
+.imagen {
+  margin-top: 20px;
+  height: 40%;
+}
