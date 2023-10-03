@@ -2,8 +2,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #007fff, #ffffff);
   height: 100vh;
+  background: linear-gradient(to bottom, #007fff, #ffffff);
 }
 
 .content-image {
@@ -19,4 +19,82 @@ main {
 .imagen {
   margin-top: 20px;
   height: 40%;
+}
+
+.container-para-atrapar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon-para-atrapa {
+  height: 100px;
+}
+
+.pokeball {
+  display: none;
+  margin-top: 100px;
+  width: 270px;
+  height: 270px;
+  background: radial-gradient(
+      white 15px,
+      black 16px 17px,
+      white 18px 23px,
+      black 25px 30px,
+      transparent 32px
+    ),
+    linear-gradient(to bottom, red 0 125px, black 126px 133px, white 134px 100%);
+  border-radius: 50%;
+  border: 8px solid black;
+  box-shadow: inset -16px -8px 0 0 rgba(0, 0, 0, 0.2);
+  animation: caer 0.6s, agitar 1s 0.7s 3, atrapar 0.5s ease-out 4.5s forwards;
+  z-index: 1;
+}
+
+@keyframes agitar {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  20% {
+    transform: translateX(-10px) rotate(-20deg);
+  }
+  30% {
+    transform: translateX(10px) rotate(20deg);
+  }
+  50% {
+    transform: translateX(-10px) rotate(-10deg);
+  }
+  60% {
+    transform: translateX(10px) rotate(10deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+
+@keyframes caer {
+  0% {
+    transform: translateY(-200%);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-20%);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes atrapar {
+  to {
+    filter: saturate(0.7);
+  }
 }
